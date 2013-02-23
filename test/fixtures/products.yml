@@ -3,11 +3,17 @@
 one:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: /images/ruby.jpg
   price: 9.99
 
 two:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: /images/cs.jpg
   price: 9.99
+
+ruby:
+  title: ruby
+  description: MyText
+  image_url: /images/ruby.jpg
+  price: 6
