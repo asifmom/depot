@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+  default_scope :order=>'title'
   attr_accessible :description, :image_url, :price, :title
   validates_presence_of :title, :price, :image_url
   validates_uniqueness_of :title
