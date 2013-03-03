@@ -4,7 +4,10 @@ class LineItemsController<ApplicationController
     @cart=current_cart
     line_item = @cart.add_product params[:product_id]
     line_item.save
-    redirect_to store_url,:notice => "line item for product #{product.title}created"
+    #redirect_to store_url,:notice => "line item for product #{product.title}created"
+    respond_to do |format|
+      format.js
+    end
   end
 
   def destroy
