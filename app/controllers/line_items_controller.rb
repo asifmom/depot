@@ -4,6 +4,7 @@ class LineItemsController<ApplicationController
     @cart=current_cart
     line_item = @cart.add_product params[:product_id]
     line_item.save
+    @current_item=line_item
     #redirect_to store_url,:notice => "line item for product #{product.title}created"
     respond_to do |format|
       format.js

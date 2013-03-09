@@ -180,3 +180,8 @@
     border-bottom: 1px dotted #595;
     margin-bottom: 10px;
 }
+
+#current_item {
+    background: #972F2C;
+    color: #FFF;
+}

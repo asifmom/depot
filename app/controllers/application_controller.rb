@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_filter :current_cart
   protect_from_forgery
   private
 
@@ -7,14 +8,14 @@ class ApplicationController < ActionController::Base
   end
 
   def current_cart
-    cart=nil
+    @cart=nil
     begin
-      cart = Cart.find(session[:cart_id])
+      @cart = Cart.find(session[:cart_id])
     rescue ActiveRecord::RecordNotFound
-      cart = Cart.create
-      session[:cart_id]=cart.id
+      @cart = Cart.create
+      session[:cart_id]=@cart.id
     end
-    cart
+    @cart
   end
 
 end
